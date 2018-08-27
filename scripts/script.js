@@ -67,7 +67,7 @@
     var Nav = {
         $el:null,
         $nav: null,
-        init( selectorPages, selectorNav ){
+        init: function( selectorPages, selectorNav ){
             this.$el  = $(selectorPages);
             this.$nav = $(selectorNav);
             this.addEvents();
@@ -96,7 +96,7 @@
         $el:null,
         $table: null,
         $newLine: null,
-        init( selectorSection ){
+        init: function( selectorSection ){
             this.$el  = $(selectorSection);
             this.$table = this.$el.find('tbody');
             this.$newLine = this.$el.find('tbody tr');
@@ -148,7 +148,7 @@
 
     var PostForm = {
         $el:null,
-        init( selectorSection ){
+        init: function( selectorSection ){
             this.$el   = $(selectorSection);
             this.$form = this.$el.find('form');
 
@@ -196,7 +196,7 @@
 
     var CommentForm = {
         $el:null,
-        init( selectorSection ){
+        init: function( selectorSection ){
             this.$el   = $(selectorSection);
             this.$form = this.$el.find('form');
 
@@ -224,6 +224,9 @@
             });
 
             this.$form.find('[name="post"]').val(postId);
+        },
+        reset: function(){
+            this.$form.find('[name]').val('');
         },
         submit: function(){
             var userId = this.$form.find('[name="author"]').val();
