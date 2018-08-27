@@ -1,0 +1,127 @@
+/* Function styles */
+
+.hide{
+    display: none;
+}
+
+
+/* Global styles */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc( 100vh - 50px );
+}
+
+section > div {
+    padding-bottom: 50px;
+}
+
+h2{
+    width: 100%;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-size: 2em;
+    color: #bac1a9;
+}
+
+fieldset {
+    padding: 0 0 10px;
+}
+
+label {
+    width: 100%;
+    padding-bottom: 5px;
+    display: block;
+}
+
+/* Table */
+
+table {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+table th {
+    font-weight: bolder;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 5px 10px;
+}
+table tr:nth-child(1) td{
+    padding-top: 25px;
+}
+table tr:last-child td{
+    padding-bottom: 25px;
+}
+table td {
+    padding: 5px;
+}
+table td:nth-child(1) {
+    text-align: center;
+}
+
+/* Navegation */
+h1{
+    display: inline-block;
+    margin-right: 50px;
+    color: #7f8e82;
+}
+nav{
+    background: #c3c3c3;
+    padding: 10px 25px;
+}
+nav ul{
+    display: inline-block;
+}
+nav li{
+    display: inline-block;
+    margin-right: 15px;
+}
+nav li a{
+    text-decoration: none;
+    color: #585858;
+}
+nav li a.active{
+    font-weight: bold;
+    color: #424242;
+}
+
+/* Form */
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #c1c1c1;
+    padding: 5px;
+    box-shadow: 0px 1px 1px #ccc inset;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bt {
+    cursor: pointer;
+    color: #2b2b2b;
+    border: 1px solid #ccd6bc;
+    padding: 8px 25px 7px;
+    background: #ced4c7;
+    display: inline-block;
+    text-decoration: none;
+    font-size: .8em;
+    margin: 0 auto;
+    transition: all .5s;
+}
+
+.bt:hover {
+    background: #edf1ef;
+}
+
+.bt-transparent{
+    background: transparent;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grupo Método</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Sistema CMS simulado</h1>
+        <ul>
+            <li><a href="#list" class="active">Posts</a></li>
+            <li><a href="#newpost">New Post</a></li>
+            <li><a href="#newcomment">New Comment</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="list" class=''>
+            <div>
+                <h2>Posts list</h2> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="bt bt-transparent" href="#newcomment">Add comment</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="bt bt-new" href="#newpost">New Post</a>
+            </div>
+        </section>
+        <section id="newpost" class='hide'>
+            <div>
+                <h2>Add new post</h2> 
+                <form action="#newpost">
+                    <fieldset>
+                        <label>Title</label>
+                        <input name="title" type="text" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Comment</label>
+                        <textarea name="content"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Author</label>
+                        <select name="author">
+                            <option>Please select an user</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <input type="submit" value="Send" class="bt" />
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <section id="newcomment" class='hide'>
+            <div>
+                <h2>Add new comment</h2> 
+                <form action="#newcomment">
+                    <fieldset>
+                        <label>Post ID</label>
+                        <input name="post" type="number" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Content</label>
+                        <textarea name="content"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Author</label>
+                        <select name="author">
+                            <option>Please select an user</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <input type="submit" value="Send" class="bt" />
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
