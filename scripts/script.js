@@ -86,6 +86,11 @@
             var self = this;
             this.$nav.find('a').click(function(){
                 var target = $(this).attr("href");
+                var component = eval( $(this).data("component") );
+
+                if( component && component.reset ) component.reset();
+                if( component && component.update ) component.update();
+
                 self.goTo( target );
                 console.log('Go to page ' + target);
                 return false;
