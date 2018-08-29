@@ -17,6 +17,21 @@ section {
     align-items: center;
     flex-direction: column;
     min-height: calc( 100vh - 50px );
+    position: relative;
+}
+
+section.loading:before{
+    content: "loading...";
+    position: fixed;
+    background: #797979;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 }
 
 section > div {
@@ -75,6 +90,8 @@ h1{
 nav{
     background: #c3c3c3;
     padding: 10px 25px;
+    position: relative;
+    z-index: 100;
 }
 nav ul{
     display: inline-block;
@@ -124,4 +141,21 @@ textarea {
 
 .bt-transparent{
     background: transparent;
+}
+
+.feedback:empty { display: none; }
+
+.feedback {
+    font-size: 0.7em;
+    margin-bottom: 15px;
+    line-height: 1.6em;
+    font-weight: bold;
+    padding: 10px 10px 20px;
+    background: #e2e2e2;
+    color: #797979;
+}
+
+.feedback strong{
+    font-size: 1.2em;
+    line-height: 2em;
 }

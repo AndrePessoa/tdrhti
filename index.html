@@ -16,6 +16,7 @@
         <ul>
             <li><a href="#list" class="active">Posts</a></li>
             <li><a href="#newpost">New Post</a></li>
+            <li><a href="#listcomments">Comments</a></li>
             <li><a href="#newcomment">New Comment</a></li>
         </ul>
     </nav>
@@ -30,6 +31,7 @@
                             <th>Title</th>
                             <th>Author</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +39,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td><a class="bt bt-transparent" href="#listcomments">View comments</a></td>
                             <td><a class="bt bt-transparent" href="#newcomment">Add comment</a></td>
                         </tr>
                     </tbody>
@@ -44,10 +47,35 @@
                 <a class="bt bt-new" href="#newpost">New Post</a>
             </div>
         </section>
+        <section id="listcomments" class='hide'>
+            <div>
+                <h2>Comments list<span></span></h2> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Post Id</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="bt bt-new" href="#newcomment">New comment</a>
+            </div>
+        </section>
         <section id="newpost" class='hide'>
             <div>
                 <h2>Add new post</h2> 
                 <form action="#newpost">
+                    <div class="feedback"></div>
                     <fieldset>
                         <label>Title</label>
                         <input name="title" type="text" />
@@ -72,6 +100,7 @@
             <div>
                 <h2>Add new comment</h2> 
                 <form action="#newcomment">
+                    <div class="feedback"></div>
                     <fieldset>
                         <label>Post ID</label>
                         <input name="post" type="number" />
